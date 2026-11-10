@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { timeline } from "@/lib/content";
+import { rsvpHref, timeline } from "@/lib/content";
 import { Logo } from "@/components/Logo";
 import { FlipArch } from "@/components/FlipArch";
 
@@ -23,12 +23,14 @@ export function SaveTheDate() {
 
           <div className="mt-10 flex items-center gap-4">
             <Logo className="h-14 w-auto shrink-0" />
-            <Link
-              href="#"
-              className="rounded-full border border-[var(--gold)] px-8 py-3 font-script text-[22px] leading-none text-[var(--gold)] transition-colors hover:bg-[var(--gold)] hover:text-white"
-            >
-              Confirme sua presença
-            </Link>
+            {rsvpHref && (
+              <Link
+                href={rsvpHref}
+                className="rounded-full border border-[var(--gold)] px-8 py-3 font-script text-[22px] leading-none text-[var(--gold)] transition-colors hover:bg-[var(--gold)] hover:text-white"
+              >
+                Confirme sua presença
+              </Link>
+            )}
           </div>
         </div>
 

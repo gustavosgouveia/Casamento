@@ -1,9 +1,9 @@
 export interface Gift {
   id: number;
   title: string;
-  price: string;
+  /** Valor em reais (número, usado no Pix). Exibição via formatBRL. */
+  price: number;
   image: string;
-  purchased: boolean;
 }
 
 export interface TimelineEntry {
@@ -26,4 +26,17 @@ export interface ScrollPanel {
 export interface NavLink {
   label: string;
   href: string;
+}
+
+export interface GuestbookEntry {
+  id: number;
+  name: string;
+  message: string;
+  created_at: string;
+}
+
+/** Estado retornado pelas Server Actions de formulário. */
+export interface FormState {
+  ok: boolean;
+  message: string;
 }

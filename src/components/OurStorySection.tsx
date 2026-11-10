@@ -17,7 +17,7 @@ export function OurStorySection() {
           </h2>
 
           <Link
-            href="#"
+            href="/nossa-historia"
             className="mt-auto w-fit rounded-full border border-[#1a1a1a]/70 px-8 py-3 font-script text-[20px] leading-none text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
           >
             {story.cta}

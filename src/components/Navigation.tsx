@@ -28,9 +28,7 @@ export function Navigation({ overHero = false }: NavigationProps) {
   // Pages without a hero are always solid; the hero page turns solid past the fold.
   const dark = overHero ? scrolledPastHero : true;
 
-  // Only real page routes get the active (script) treatment.
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : href === "/presentes" && pathname.startsWith("/presentes");
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
     <nav
