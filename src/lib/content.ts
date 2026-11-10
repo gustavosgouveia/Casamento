@@ -8,6 +8,7 @@ export const navLinks: NavLink[] = [
   { label: "Dicas e Instruções", href: "/dicas" },
   { label: "Nossa história", href: "/nossa-historia" },
   { label: "Recados", href: "/recados" },
+  { label: "Confirmar presença", href: "/confirmar" },
 ];
 
 export const hero = {
@@ -122,5 +123,6 @@ export const pix = {
   receiverCity: "TAUBATE", // até 15 caracteres, sem acento
 };
 
-// Link do botão "Confirme sua presença" (ex.: https://wa.me/5512999999999). Vazio = botão oculto.
-export const rsvpHref = ""; // TODO casal
+// Link do botão "Confirme sua presença". Vazio = botão oculto.
+export const rsvpHref = "/confirmar";
+export const rsvpDeadline = "01 de julho de 2027"; // TODO casal: prazo para confirmar
