@@ -11,8 +11,13 @@ const inter = Inter({
 const description = "nas ditas linhas em que nos encontramos — 01 de Agosto de 2027";
 
 export const metadata: Metadata = {
-  // TODO casal: trocar pelo domínio definitivo (ou definir NEXT_PUBLIC_SITE_URL).
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  // Domínio próprio: definir NEXT_PUBLIC_SITE_URL. Senão usa o domínio de produção da Vercel.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "http://localhost:3000"),
+  ),
   title: "Samira & Gustavo",
   description,
   icons: {
